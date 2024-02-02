@@ -1,0 +1,156 @@
+<div class="data-form">
+    <form method="POST" action="<%=`/jobs/${job._id}/update?_method=PUT`%>">
+        <h2>Edit Job:</h2>
+        <div class="col-25">
+            <label for="inputTitle">Title</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="title"
+            id="inputTitle"
+            value="<%= job.title %>"
+            placeholder="Title"
+            autofocus
+            required
+        />
+        </div>
+        
+        <div class="col-25">
+            <label for="inputCompany">Company</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="company"
+            id="inputCompany"
+            value="<%= job.company %>"
+            placeholder="Company"
+            required
+        />
+        </div>
+        
+        <div class="col-25">
+            <label for="inputLocation">Location</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="location"
+            id="inputLocation"
+            value="<%= job.location %>"
+            placeholder="Location"
+            required
+        />
+        </div>
+        
+        <div class="col-25">
+            <label for="inputDescription">Description</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="description"
+            id="inputDescription"
+            value="<%= job.description %>"
+            placeholder="Description"
+            required
+        />
+        </div>
+        
+        <div class="col-25">
+            <label for="inputRequirements">Requirements</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="requirements"
+            id="inputRequirements"
+            value="<%= job.requirements %>"
+            placeholder="Requirements"
+            required
+        />
+        </div>
+        
+        <div class="col-25">
+            <label for="inputSalary">Salary</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="salary"
+            id="inputSalary"
+            value="<%= job.salary %>"
+            placeholder="Salary"
+        />
+        </div>
+        
+        <div class="col-25">
+            <label for="inputContactEmail">Contact Email</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="contactEmail"
+            id="inputContactEmail"
+            value="<%= job.contactEmail %>"
+            placeholder="Contact Email"
+        />
+        </div>
+        
+        <div class="col-25">
+            <label for="inputContactPhone">Contact Phone</label>
+        </div>
+        <div class="col-75">
+           <input
+            type="text"
+            name="contactPhone"
+            id="inputContactPhone"
+            value="<%= job.contactPhone %>"
+            placeholder="Contact Phone"
+        /> 
+        </div>
+        
+        <div class="col-25">
+            <label for="inputPostDate">Post Date</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="postDate"
+            id="inputPostDate"
+            value="<%= job.postDate %>"
+            placeholder="Post Date"
+        />     
+        </div>
+        
+        <div class="col-25">
+            <label for="inputDeadlineDate">Deadline Date</label>
+        </div>
+        <div class="col-75">
+            <input
+            type="text"
+            name="deadlineDate"
+            id="inputDeadlineDate"
+            value="<%= job.deadlineDate %>"
+            placeholder="Deadline Date"
+        /> 
+        </div>
+         
+        <div class="col-25">
+            <label for="inputIsActive">Is Active</label>
+        </div>   
+        <div class="col-75">
+            <input
+            type="text"
+            name="isActive"
+            id="inputIsActive"
+            value="<%= job.isActive %>"
+            placeholder="Is Active"
+        />
+        </div>
+         
+        <button type="submit">Update</button>
+    </form>
+  </div>
+  

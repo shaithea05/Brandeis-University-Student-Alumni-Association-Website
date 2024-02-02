@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="main">
+
+        <% if (currentUser) { %>
+            <div class="container">
+                <div class="left">
+                    <article id="left">
+                        <div class="chatBox">
+                            <h1 id="chatTitle">Chat</h1>
+                            <form id="chatForm">
+                                <input id="chat-input" type="text" />
+                                <input id="chat-user-name" type="hidden" value="<%= currentUser.name %>" />
+                                <input id="chat-user-id" type="hidden" value="<%= currentUser._id %>" />
+                                <input id=submitButton type="submit" value="Send" />
+                            </form>
+                            <div class="displayingChat" id="chat"></div>
+                        </div>
+
+                    </article>
+                </div>
+
+            </div>
+            <% } %>
+
+                <% if (!currentUser) { %>
+                    <div class="container">
+                        <!-- <h1> Log in!! </h1> -->
+                        <h1>You need to <a href="/users/login">log in</a> !! </h1>
+                    </div>
+                    <% } %>
+
+
+    </div>
+    <div class="side">
+        <img class="centeredImage"src="/images/brandeisBanner.png" alt="Brandeis Events">
+    </div>
+</div>
+
+
+
+
+
+<div class="right">
+    <article id="right">
+        
+    </article>
+</div>

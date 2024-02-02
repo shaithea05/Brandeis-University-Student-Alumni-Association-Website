@@ -1,0 +1,137 @@
+<div class="row">
+    <div class="side">
+        <div class="container" class="data-form">
+            <form action="/users/create" method="POST">
+                <h2>Create A New User:</h2>
+                <div class="col-25">
+                    <label for="inputName">Name*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="name" id="inputName" placeholder="Name" autofocus required />
+                </div>
+                <div class="col-25">
+                    <label for="inputEmail">Email Address*</label>
+                </div>
+                <div class="col-75">
+                    <input type="email" name="email" id="inputEmail" placeholder="Email Address" required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputPassword">Password*</label>
+                </div>
+                <div class="col-75">
+                    <input type="password" name="password" id="inputPassword" placeholder="Password" required />
+                </div>
+
+                <!-- <div class="col-25">
+                    <label for="inputRole">Role*</label>
+                </div>
+                <div class="col-75">
+                    <input
+                    type="text"
+                    name="role"
+                    id="inputRole"
+                    placeholder="Student / Alumni"
+                />
+                </div> -->
+
+                <div class="col-25">
+                    <label for="inputRole">Role*</label>
+                </div>
+                <div class="col-75">
+                    <select id="role" name="role">
+                        <option value="student">Student</option>
+                        <option value="alumni">Alumni</option>
+                    </select>
+                </div>
+
+                <div class="col-25">
+                    <label for="inputGraduationYear">Graduation Year*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="graduationYear" id="inputGraduationYear" placeholder="Graduation Year"
+                        required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputMajor">Major*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="major" id="inputMajor" placeholder="Major" required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputJob">Job</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="job" id="inputJob" placeholder="Job" />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputCompany">Company</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="company" id="inputCompany" placeholder="Company" />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputCity">City</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="city" id="inputCity" placeholder="City" />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputState">State</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="state" id="inputState" placeholder="State" />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputCountry">Country</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="country" id="inputCountry" placeholder="Country" />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputZipCode">Zip Code*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="zipCode" id="inputZipCode" pattern="\d*" placeholder="Zip Code" required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputBio">Bio</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="bio" id="inputBio" placeholder="Bio" />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputInterests">Interests</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="interests" id="inputInterests" placeholder="Interests" />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputIsAdmin">Is Admin</label>
+                </div>
+                <div class="col-75">
+                    <select id="isAdmin" name="isAdmin">
+                        <option value="false">False</option>
+                        <option value="true">True</option>
+                    </select>
+                </div>
+
+                <button type="submit">Sign Up!</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="main">
+        <img src="/images/brandyUni.jpeg" alt="Brandeis University view from Chapel's Field>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+<div class="data-form">
+    <form method="POST" action="<%=`/events/${event._id}/update?_method=PUT`%>">
+      <h2>Edit Event:</h2>
+      <div class="col-25">
+        <label for="inputTitle">Title</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="title"
+        id="inputTitle"
+        value="<%= event.title %>"
+        placeholder="Title"
+        autofocus
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputDescription">Description</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="description"
+        id="inputDescription"
+        value="<%= event.description %>"
+        placeholder="Description"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputLocation">Location</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="location"
+        id="inputLocation"
+        value="<%= event.location %>"
+        placeholder="Location"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputStartDate">Start Date</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="startDate"
+        id="inputStartDate"
+        value="<%= event.startDate %>"
+        placeholder="Start Date"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputEndDate">End Date</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="endDate"
+        id="inputEndDate"
+        value="<%= event.endDate %>"
+        placeholder="End Date"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputIsOnline">Is Online</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="isOnline"
+        id="inputIsOnline"
+        value="<%= event.isOnline %>"
+        placeholder="Is Online"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputRegistrationLink">Registration Link</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="registrationLink"
+        id="inputRegistrationLink"
+        value="<%= event.registrationLink %>"
+        placeholder="Registration Link"
+      />
+      </div>
+      
+      <!-- <div class="col-25">
+        <label for="inputOrganizer">Organizer</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="organizer"
+        id="inputOrganizer"
+        value="<%= event.organizer %>"
+        placeholder="Organizer"
+        required
+      />
+      </div> -->
+      
+      <!-- <div class="col-25">
+        <label for="inputAttendees">Attendees</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="attendees"
+        id="inputAttendees"
+        value="<%= event.attendees %>"
+        placeholder="Attendees"
+      />
+      </div> -->
+      
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  

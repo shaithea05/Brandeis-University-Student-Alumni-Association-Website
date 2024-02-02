@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="side">
+        <img class="centeredImage" src="/images/BrandeisJobs.jpeg" alt="Brandeis Jobs">
+    </div>
+    <div class="main">
+        <h1>Jobs</h1>
+            <div>
+                <button><a class='seeMembersButton' href="/jobs/new">Create a new job!</a></button>
+            </div>
+            <h3>Open Job Listings at <span class="bolded">Brandeis University</span></h3>
+
+            <table class="table">
+                <tr>
+                    <th>Title</th>
+                    <th>Company</th>
+                    <th>Location</th>
+                    <th>Description</th>
+                    <th>Deadline Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <% jobs.forEach(job=> { %>
+                        <tr>
+                            <td>
+                                <a href="<%= `/jobs/${job._id}` %>">
+                                    <%= job.title %>
+                                </a>
+                            </td>
+                            <td>
+                                <%= job.company %>
+                            </td>
+                            <td>
+                                <%= job.location %>
+                            </td>
+                            <td>
+                                <%= job.description %>
+                            </td>
+                            <td>
+                                <%= job.deadlineDate.toDateString() %>
+                            </td>
+                            <td>
+                                <a href="<%=`/jobs/${job._id}/edit` %>"> Edit </a>
+                            </td>
+                            <td>
+                                <a href="<%= `jobs/${job._id}/delete?_method=DELETE` %>"
+                                    onclick="return confirm('Are you sure you want to delete this record?')">Delete</a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+    </div>
+  </div>
+

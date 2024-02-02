@@ -1,0 +1,196 @@
+<div class="data-form">
+    <form method="POST" action="<%=`/users/${user._id}/update?_method=PUT`%>">
+      <h2>Edit User:</h2>
+      <div class="col-25">
+        <label for="inputName">Name</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="name"
+        id="inputName"
+        value="<%= user.name %>"
+        placeholder="Name"
+        autofocus
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputEmail">Email address</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="email"
+        name="email"
+        id="inputEmail"
+        value="<%= user.email %>"
+        placeholder="Email Address"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputPassword">Password</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="password"
+        name="password"
+        id="inputPassword"
+        value="<%= user.password %>"
+        placeholder="Password"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputRole">Role</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="role"
+        id="inputRole"
+        value="<%= user.role %>"
+        placeholder="Role"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputGraduationYear">Graduation Year</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="graduationYear"
+        id="inputGraduationYear"
+        value="<%= user.graduationYear %>"
+        placeholder="Graduation Year"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputMajor">Major</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="major"
+        id="inputMajor"
+        value="<%= user.major %>"
+        placeholder="Major"
+        required
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputJob">Job</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="job"
+        id="inputJob"
+        value="<%= user.job %>"
+        placeholder="Job"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputCompany">Company</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="company"
+        id="inputCompany"
+        value="<%= user.company %>"
+        placeholder="Company"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputCity">City</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="city"
+        id="inputCity"
+        value="<%= user.city %>"
+        placeholder="City"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputState">State</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="state"
+        id="inputState"
+        value="<%= user.state %>"
+        placeholder="State"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputCountry">Country</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="country"
+        id="inputCountry"
+        value="<%= user.country %>"
+        placeholder="Country"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputZipCode">Zip Code</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="zipCode"
+        id="inputZipCode"
+        pattern="\d*"
+        value="<%= user.zipCode %>"
+        placeholder="Zip Code"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputBio">Bio</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="bio"
+        id="inputBio"
+        value="<%= user.bio %>"
+        placeholder="Bio"
+      />
+      </div>
+      
+      <div class="col-25">
+        <label for="inputInterests">Interests</label>
+      </div>
+      <div class="col-75">
+        <input
+        type="text"
+        name="interests"
+        id="inputInterests"
+        value="<%= user.interests %>"
+        placeholder="Interests"
+      />
+      </div>
+      
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  

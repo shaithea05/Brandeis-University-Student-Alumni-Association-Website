@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+</head>
+
+<body>
+
+    <% if(!loggedIn) { %>
+        <a href="/users/login">Log In</a>
+        <!-- &nbsp; -->
+        <a href="../users/new"> Sign Up</a>
+        <% } else { %>
+            Logged in as <a href="<%=`/users/${currentUser._id}`%>">
+                <%= currentUser.name %><br>
+            </a>
+            <div id="apiToken" data-token="<%=currentUser.apiToken %>" style="display: none" ></div>
+            <a href="/users/logout">Log Out</a>
+            <% } %>
+
+                <!-- <img id="brandeisLogo" src="/images/brandeisLogo.png"> -->
+                <header class="header">
+                    <div class="header">
+                        <h1>Brandeis University</h1>
+                        <p>Student & Alumni Association</p>
+                    </div>
+
+                    <div class="navbar">
+                        <a href="/index">Home</a>
+                        <a href="/about">About</a>
+                        <a href="/jobs">Jobs</a>
+                        <a href="/events">Events</a>
+                        <a href="/contact">Contact</a>
+
+                        <a href="/chat" class="right">@</a>
+                        <div class="right" id="modalText">
+                            <%- include('events/_eventsModal') %>
+                        </div>
+                    </div>
+
+                    <!-- <nav>
+                        <div id="menu">
+                            <ul>
+                                <li><a href="/index">Home</a> </li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/jobs">Jobs</a></li>
+                                <li><a href="/events">Events</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/chat">@</a></li>
+                                modal goes here
+                            </ul>
+                        </div>
+                        
+
+                    </nav> -->
+                    </div>
+
+                    <!-- <div id="header-image-menu">
+                        <img src="images/brandeisBridge.jpeg">
+                        <h2 id="image-text">
+                            Students & Alumni Association
+                        </h2>
+                    </div> -->
+                </header>
+
+                <!-- <header class="heading">
+                    <a href="/index">
+                        <img id="brandeisLogo" src="/images/BrandeisLogo.png">
+                    </a>
+                    <h1 class="title" id="leftTitle">Brandeis University</h1><br>
+                    <h2 class="title" id="rightTitle">Students & Alumni Association</h2>
+                </header> -->
+
+                <!-- <nav>
+                    <a class='sandyBrown' href="/index">Home</a>
+                    <a class='chocolate' href="/about">About</a>
+                    <a class='sandyBrown' href="/jobs">Jobs</a>
+                    <a class='chocolate' href="/events">Events</a>
+                    <a class='sandyBrown' href="/contact">Contact</a>
+                    <a class='chocolate' href="/chat">@</a>
+                    modal goes here
+
+                </nav> -->
+
+                <div class="flashes">
+                    <% if (flashMessages) { %>
+                        <% if (flashMessages.success) { %>
+                            <div class="flash success">
+                                <%= flashMessages.success %>
+                            </div>
+                            <% } else if (flashMessages.error) { %>
+                                <div class="flash error">
+                                    <%= flashMessages.error %>
+                                </div>
+                                <% } %>
+                                    <% } %>
+                </div>
+                <%- body%>
+
+                    <!-- <footer>
+                        <p>&copy 2023 Brandeis University</p>
+                        <section class="links">
+                            <a href='https://www.facebook.com/brandeisuniversity/' class="fa-brands fa-facebook"></a>
+                            <a href='https://www.instagram.com/brandeisuniversity/' class="fa-brands fa-instagram"></a>
+                            <a href='https://www.linkedin.com/school/brandeis-university/'
+                                class="fa-brands fa-linkedin"></a>
+                            <a href='https://www.youtube.com/BRANDEISUNIVERSITY' class="fa-brands fa-youtube"></a>
+                            <a href='https://twitter.com/BrandeisU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'
+                                class="fa-brands fa-twitter"></a>
+                        </section>
+
+                    </footer> -->
+
+
+
+                    <div class="footer">
+                        <h2>&copy 2023 Brandeis University</h2>
+<div class="links">
+     <a href='https://www.facebook.com/brandeisuniversity/' class="fa-brands fa-facebook"></a>
+                        <a href='https://www.instagram.com/brandeisuniversity/' class="fa-brands fa-instagram"></a>
+                        <a href='https://www.linkedin.com/school/brandeis-university/'
+                            class="fa-brands fa-linkedin"></a>
+                        <a href='https://www.youtube.com/BRANDEISUNIVERSITY' class="fa-brands fa-youtube"></a>
+                        <a href='https://twitter.com/BrandeisU?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'
+                            class="fa-brands fa-twitter"></a>
+</div>
+                       
+                    </div>
+
+                    <script type="text/javascript" src="/js/jquery.min.js"></script>
+                    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+                    <script src="/socket.io/socket.io.js"></script>
+                    <script type="text/javascript" src="/js/cpaApp.js"></script>
+</body>
+
+</html>

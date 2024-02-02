@@ -1,0 +1,91 @@
+<div class="row">
+    <div class="side">
+        <div class="container" class="data-form">
+            <form action="/events/create" method="POST">
+                <h2>Create a new event:</h2>
+                <div class="col-25">
+                    <label for="inputTitle">Title*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="title" id="inputTitle" placeholder="Title" autofocus required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputDescription">Description*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="description" id="inputDescription" placeholder="Description" required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputLocation">Location*</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="location" id="inputLocation" placeholder="Location" required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputStartDate">Start Date*</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" name="startDate" id="inputStartDate" placeholder="Start Date" required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputEndDate">End Date*</label>
+                </div>
+                <div class="col-75">
+                    <input type="date" name="endDate" id="inputEndDate" placeholder="End Date" required />
+                </div>
+
+                <div class="col-25">
+                    <label for="inputIsOnline">Is Online</label>
+                </div>
+                <div class="col-75">
+                    <select id="isOnline" name="isOnline">
+                        <option value="false">False</option>
+                        <option value="true">True</option>
+                    </select>
+                </div>
+
+                <div class="col-25">
+                    <label for="inputRegistrationLink">Registration Link</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="registrationLink" id="inputRegistrationLink"
+                        placeholder="Registration Link" />
+                </div>
+
+                <!-- <div class="col-25">
+                    <label for="inputOrganizer">Organizer</label>
+                </div>
+                <div class="col-75">
+                  <input
+                    type="text"
+                    name="organizer"
+                    id="inputOrganizer"
+                    placeholder="Organizer"
+                    required
+                />  
+                </div>
+                
+                <div class="col-25">
+                    <label for="inputAttendees">Attendees</label>
+                </div>
+                <div class="col-75">
+                    <input
+                    type="text"
+                    name="attendees"
+                    id="inputAttendees"
+                    placeholder="Attendees"
+                />   
+                </div> -->
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="main">
+        <img src="/images/inauguration.jpeg" alt="Brandeis Event Photo">
+    </div>
+</div>

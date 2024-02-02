@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="side">
+        <img class="centeredImage" src="/images/BrandeisEvents.jpeg" alt="Brandeis Events">
+    </div>
+    <div class="main">
+        <h1>Events</h1>
+        <!-- <a href="events/new">Create a New Event!</a> -->
+        <button><a class='seeMembersButton' href="/events/new">Create a new event!</a></button>
+        <h3>Upcoming Events at <span class="bolded">Brandeis University</span></h3>
+        <!-- <h2>Events Table</h2> -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Organizer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% events.forEach(event=> { %>
+                    <tr>
+                        <td>
+                            <a href="<%= `/events/${event._id}` %>">
+                                <%= event.title %>
+                            </a>
+                        </td>
+                        <td>
+                            <%= event.description %>
+                        </td>
+                        <td>
+                            <%= event.location %>
+                        </td>
+                        <td>
+                            <%= event.startDate.toDateString()%>
+                        </td>
+                        <td>
+                            <%= event.endDate.toDateString() %>
+                        </td>
+                        <td>
+                            <%= event.organizer.name %>
+                        </td>
+                        <!-- <td>
+                    <% event.attendees.forEach(member=> {%>
+                      <p><%= member.name %>
+                      </p>
+                      <% });%>
+                  </td> -->
+                        <td>
+                            <a href="<%=`/events/${event._id}/edit` %>"> Edit </a>
+                        </td>
+                        <td>
+                            <a href="<%= `events/${event._id}/delete?_method=DELETE` %>"
+                                onclick="return confirm('Are you sure you want to delete this record?')">Delete</a>
+                        </td>
+                        <td>
+                            <!-- <a href="/events/register">Enroll</a> -->
+                            <!-- <a href="<%= `events/${event._id}/attend?_method=PUT` %>" 
+                        onclick="return confirm('Are you sure you want to register to this event?')">Register</a> -->
+
+
+                        
+                        <!-- <a href="<%=`/events/${event._id}/register` %>">Register</a> -->
+                            <a href="<%= `events/${event._id}/attend?_method=PUT` %>">Register</a>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+<div>
+    <!-- <button><a class="createNew" href="/events/new">Create a new event!</a></button> -->
+    <!-- <a href="/events/new"><button>Create a new event!</button></a> -->
+</div>
